@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Laughs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+      height: 100vh;
+      overflow: hidden;
+      transition: background 0.2s ease;
+    }
+
+    h2 {
+      margin: 30px 0 20px;
+      font-size: 1.8rem;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    a button {
+      padding: 15px 25px;
+      margin: 15px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #be5e5e;
+      background: linear-gradient(to right, #ff9966, #ff5e62);
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    a button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Welcome to Random!!</h2>
+
+  <a href="https://www.youtube.com/watch?v=iIfeceS0i4c" target="_blank">
+    <button>Click this random button</button>
+  </a>
+
+  <h2>I thought that was funny, did you? It was pretty random too.</h2>
+
+  <a href="https://www.youtube.com/shorts/RaBZSyLZk9Y" target="_blank">
+    <button>But if you really want to laugh, press this button</button>
+  </a>
+
+  <h2>...Did you even laugh...</h2>
+
+  <a href="https://www.youtube.com/shorts/pFO4I33cLuo" target="_blank">
+    <button>This will be even funnier trust me</button>
+  </a>
+
+  <script>
+    // Dynamic background that changes with mouse position
+    document.addEventListener("mousemove", function(e) {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+
+      document.body.style.background = `
+        radial-gradient(
+          circle at ${x * 100}% ${y * 100}%,
+          #ff9a9e,
+          #fad0c4,
+          #fad0c4
+        )
+      `;
+    });
+  </script>
+</body>
+</html>
